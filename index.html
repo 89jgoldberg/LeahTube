@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Import materialize.css-->
+	<link href="/assets/css/materialize.min.css" media="screen,projection" rel="stylesheet" type="text/css">
+	<link href="/assets/css/all.css" media="screen,projection" rel="stylesheet" type="text/css">
+	<link href="/assets/css/main.css" media="screen,projection" rel="stylesheet" type="text/css">
+	<!--Let browser know website is optimized for mobile-->
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<script src="/assets/js/jq.js"></script> 
+	<script src="/assets/js/HandleError.js"></script>
+	<script src="/assets/js/Pref.js"></script>
+	<script src="/assets/js/materialize.min.js" type="text/javascript"></script>
+	<title>LeahTube</title>
+</head>
+<body>
+<nav id="nav" class="row">
+	<a href="/"><div class="col l2 logo"></div></a>
+	<div class="col l5 offset-l1">
+		<form id="search-parent" class="search-input hide-on-med-and-down">
+			<div class="input-field">
+			<input id="search" type="search" placeholder="Search or Enter YouTube URL"/>
+			<label for="search" class="label-icon"><i class="fas fa-search"></i></label>
+			<input type="hidden" name="poster"/>
+			</div>
+		</form>
+	</div>
+	<div class="col l1 offset-l2"><a class="modal-trigger btn-flat" href="#leah-prefs"><i class="fas fa-cog"></i></a></div>
+</nav> 
+<div class="container">
+	<div class="card-panel">
+	<h4>Welcome!</h4>
+	<h5 style="display:none;" class="mobile-warn"><b>Warning! I have not yet fully tested LeahTube on mobile devices, be ready for things to break!</b></h5>
+	<h6>This is a hobby/passion project, significant new features will only be added when I have the time.</h6>
+	<p>LeahTube is a YouTube client written nearly entirely in JavaScript, with all data handling being done in-browser.
+	<b>Type a search query or a YouTube URL into the search bar above to get started!</b></p>
+	<br>
+	<h4>Contact</h4>
+	<span class="contact-btns">
+	<a href="https://github.com/89jgoldberg/LeahTube" target="_blank" class="waves-effect waves-light btn-small"><i class="fab fa-github-alt left"></i>GitHub</a>
+	<a href="javascript:window.open('mailto:'+atob('ODlqZ29sZGJlcg==')+atob('Z0BnbWFpbC5jb20=')+'?subject=[LeahTube] ')" class="waves-effect waves-light btn-small"><i class="far fa-envelope left"></i></i>Email</a>
+	</span>
+	<br>
+	<h4>Small FAQ</h4>
+	<h5>Why did you make this?</h5><p>Mostly as a proof-of-concept. When I went to public school during the late 2000's and 2010's, YouTube would always be inaccessible whether it be a Network/Router Block or the device itself was prohibited to load videos (i.e. Chromebooks). While VPNs worked fine, I always seeked for a better alternative. I'm no longer in public school but the idea of a YouTube clone always floated in my head.</p><hr>
+	<h5>How does this work?</h5><p>LeahTube bypasses network restrictions by simply taking advantage of Public Google APIs. No company or school would block Google.com, so LeahTube fetches all data through Google (or alternative web scrapers) and loads the html plaintext into the browser client, which we can process.</p><hr>
+	<h5>I see jQuery in the sources, this isn't vanilla!</h5><p>I only use jQuery on here for easily writing data to the page. All web scraping and video processing are done entirely in Vanilla.</p><hr>
+	<h5>Who's Leah?</h5><p>A friend who I decided to name this after, and the desginer of the LeahTube logo.</p><hr>
+	<h5>What future features will be added?</h5><p>First and foremost will be Channels. Playlists might join as well, and if there's any way of fetching subscriptions I won't have a problem with that either.</p><hr>
+	</div>
+</div>
+<!--JavaScript at end of body for optimized loading-->
+	<script src="/assets/js/PrefModal.js"></script>
+	<script src="/assets/js/bar.js"></script>
+	<script>if(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)){$('.mobile-warn').show();}</script>
+	</body>
+	</html>

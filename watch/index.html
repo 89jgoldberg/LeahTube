@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Import materialize.css-->
+	<link href="/assets/css/materialize.min.css" media="screen,projection" rel="stylesheet" type="text/css">
+	<link href="/assets/css/animista.css" rel="stylesheet" type="text/css">
+	<link href="/assets/css/videojs.css" rel="stylesheet" type="text/css">
+	<link href="/assets/css/all.css" media="screen,projection" rel="stylesheet" type="text/css">
+	<link href="/assets/css/main.css" media="screen,projection" rel="stylesheet" type="text/css">
+	<!--Let browser know website is optimized for mobile-->
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<script src="/assets/js/jq.js"></script> 
+	<script src="/assets/js/HandleError.js"></script>
+	<script src="/assets/js/Pref.js"></script>
+	<script src="/assets/js/materialize.min.js" type="text/javascript"></script>
+	<link href="/assets/css/ease.css" rel="stylesheet" type="text/css">
+	<title>LeahTube</title>
+</head>
+<body>
+<nav id="nav" class="row">
+	<a href="/"><div class="col l2 logo"></div></a>
+	<div class="col l5 offset-l1">
+		<form id="search-parent" class="search-input hide-on-med-and-down">
+			<div class="input-field">
+			<input id="search" type="search" palceholder="Search or Enter YouTube URL"/>
+			<label for="search" class="label-icon"><i class="fas fa-search"></i></label>
+			<input type="hidden" name="poster"/>
+			</div>
+		</form>
+	</div>
+	<div class="col l1 offset-l2"><a class="modal-trigger btn-flat" href="#leah-prefs"><i class="fas fa-cog"></i></a></div>
+</nav>  
+	<div class="row video-page">
+	<div class="col s12 m7 xl8 video-details">
+			<div class="leah-video">
+				<div class="progress-debug" style="display:none;"></div><video class="video-js vjs-big-play-centered vjs-fluid" id="video" style="/*display:none;*/">
+				<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p><audio id="audio" style="display:none;"><source></audio></video>
+			</div>
+			<div class="row meta">
+				<div class="col s9" style="width: 100%;">
+					<div class="meta-head">
+						<h5 class="meta-title"></h5>
+						<h6 class="meta-views"><span></span> views</h6>
+						<div style="position:absolute;bottom:0;right:0;width:15rem;float:right;">
+						<div class="meta-rating-bar">
+							<div class="green tooltipped" data-position="top" id="like-block" style="height:100%;float: left;"></div>
+							<div class="red tooltipped" data-position="top" id="dislike-block" style="height:100%;float: right;text-align:right;"></div>
+						</div>
+						</div>
+					</div>
+				</div>
+				<div class="col s12">
+					<div class="meta-description">
+						<div style="position:relative;top:0;right:0;max-width:15rem;float:right;">
+							<a class="waves-effect waves-light btn-flat purple darken-4 audio-btn white-text" style="display:none;"><i class="fas fa-headphones-alt"></i></a> <a class="waves-effect btn-flat amber save-btn" style="display:none;"><i class="fas fa-save"></i></a>
+						</div>
+						<div class="meta-author">
+							<a class="meta-author-link"><img class="meta-author-icon tooltipped"/></a>
+							<div style="display: inline-block;"><a class="meta-author-link"><h6 class="meta-author-name"><i class="fas fa-user"></i></h6></a>
+							<h6 class="meta-author-date"><i class="far fa-calendar"></i></h6></div>
+						</div>
+						<div class="text"></div>
+					</div>
+				</div>
+			</div>
+	</div>
+	<div class="col s12 m5 xl4" id="side-related">
+		<div id="related-videos"></div>
+	</div>
+	</div>
+	
+	<!--JavaScript at end of body for optimized loading-->
+	<script src="/assets/js/PrefModal.js"></script>
+	<script src="/assets/js/querystring.js"></script>
+	<script src="/assets/js/FORMATS.js"></script> 
+	<script src="/assets/js/videojs/video.min.js" type="text/javascript"></script>
+	<script src="/assets/js/videojs/videojs-qualityselector.min.js" type="text/javascript"></script>
+	<script src="/assets/js/videojs/videojs.theaterMode.js" type="text/javascript"></script>
+	<script src="/assets/js/videojs/videojs.framebyframe.min.js" type="text/javascript"></script>
+	<script src="/assets/js/watch.js"></script>
+</body>
+</html>
